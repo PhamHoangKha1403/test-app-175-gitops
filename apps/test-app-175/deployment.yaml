@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app-175
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: test-app-175
+  template:
+    metadata:
+      labels:
+        app: test-app-175
+    spec:
+      containers:
+        - name: app
+          image: phamhoangkha1403/test-app-175-service:@sha256:228fc4b5171dea0ec77d37c275351433a6bc75fa2b8222278e8696b9b3b00e99
+          ports:
+            - containerPort: 0
